@@ -1,6 +1,3 @@
-html{
-
-}
 body{
   background-image: url(../FrontEnd/Images/bg.jpg);
   color:#555555;
@@ -78,7 +75,7 @@ body{
 }
 
 .slideShow{
-  display: none;
+  display:;
 }
 
 .slideShow img{
