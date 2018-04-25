@@ -1,9 +1,12 @@
 <!DOCTYPE html>
+{% load static %}
+
+
 
 <html>
   <head>
     <title>My Website</title>
-    <link rel="stylesheet" type="text/css" href="../FrontEnd/CSS/index.css">
+    <link rel="stylesheet" type="text/css" href=="{% static 'index.css' %}" >
     <script>
       var slideIndex = 1;
       showSlides(slideIndex);
