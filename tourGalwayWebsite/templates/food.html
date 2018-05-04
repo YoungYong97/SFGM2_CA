@@ -15,11 +15,11 @@
     </header>
 
     <div class="container" id="navBar">
-      <a href="index.html">Home</a>
-      <a href="ptv.html">Places To Visit</a>
-      <a class="active" href="food.html">Food</a>
-      <a href="transport.html">Transport</a>
-      <a href="contact.html">Contact Us</a>
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'ptv' %}">Places To Visit</a>
+      <a class="active" href="{% url 'food' %}">Food</a>
+      <a href="{% url 'transport' %}">Transport</a>
+      <a href="{% url 'contact' %}">Contact Us</a>
     </div>
 
 

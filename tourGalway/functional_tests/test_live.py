@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 #The first line is the encoding to use in this file in this case UTF-8
-
 from selenium import webdriver
 import unittest
 import time
@@ -10,7 +9,6 @@ import time
 
 #We create a class NewVistorTest which inherits from TestCase  
 class NewVisitorTest(unittest.TestCase):
- 
 #setUp runs at the begining of the test and setups whatever we need, in this case it lauches the Firefox browser
     def setUp(self):
         self.browser = webdriver.Firefox() #lauch Firefox browser, requires geckodriver.exe to be on your PATH
@@ -23,7 +21,6 @@ class NewVisitorTest(unittest.TestCase):
 #Here we are testing that the phrase Welcome to Django is being displayed in the page available at http://localhost:8000, our development server
     def test_title(self):
         self.browser.get('http://localhost:8000')
-        self.assertIn("A Sample Django App!", self.browser.title)
         time.sleep(5)
 
 
