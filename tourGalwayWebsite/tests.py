@@ -5,17 +5,24 @@ from .models import Board
 
 #Tests for forum
 class ForumTests(TestCase):
+    def setUp(self):
+        self.board = Board.objects.create(name='Other Stuff', description='A discussion about unrelated things')
+        url = reverse('forum')
+        self.response = self.client.get(url)
+
     def test_forum_view_status_code(self):
         url = reverse('forum')
         response = self.client.get(url)
         self.assertEquals(response.status_code, 200)
+
     def test_forum_url_resolves_forum_view(self):
-        view = resolve('/')
+        view = resolve('/forum/')
         self.assertEquals(view.func, forum)
-    def setUp(self):
-        self.board = Board.objects.create(name='GSD', description='GSD board.')
-        url = reverse('forum')
-        self.response = self.client.get(url)
+
+    def test_forum_view_contains_link_to_topics_page(self):
+        board_topics_url = reverse('board_topics', kwargs={'pk': self.board.pk})
+        self.assertContains(self.response, 'href="{0}"'.format(board_topics_url))
+
 
 
 #Tests for home
