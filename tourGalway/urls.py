@@ -27,4 +27,5 @@ urlpatterns = [
     url(r'^ptv/$', views.ptv, name='ptv'),
     url(r'^transport/$', views.transport, name='transport'),
     url(r'^forum/(?P<pk>\d+)/$', views.board_topics, name='board_topics'),
+    url(r'^forum/(?P<pk>\d+)/new/$', views.new_topic, name='new_topic'),
 ]

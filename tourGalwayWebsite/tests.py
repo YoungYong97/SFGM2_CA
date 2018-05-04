@@ -1,6 +1,6 @@
 from django.urls import reverse, resolve
 from django.test import TestCase
-from .views import forum ,board_topics ,home
+from .views import forum, board_topics ,home, new_topic
 from .models import Board
 
 #Tests for forum
@@ -56,4 +56,35 @@ class BoardTopicsTests(TestCase):
     def test_board_topics_url_resolves_board_topics_view(self):
         view = resolve('/forum/2/')
         self.assertEquals(view.func, board_topics)
+#Testing if topic view links back to forum page.
+    def test_board_topics_view_contains_link_back_to_homepage(self):
+        board_topics_url = reverse('board_topics', kwargs={'pk': 1})
+        response = self.client.get(board_topics_url)
+        homepage_url = reverse('forum')
+        self.assertContains(response, 'href="{0}"'.format(homepage_url))
+
+class NewTopicTests(TestCase):
+    #setUp: creates a Board instance to be used
+    def setUp(self):
+        Board.objects.create(name='Other Stuff', description='A discussion about unrelated things')
+    #test to check if request to view is succesful
+    def test_new_topic_view_success_status_code(self):
+        url = reverse('new_topic', kwargs={'pk': 1})
+        response = self.client.get(url)
+        self.assertEquals(response.status_code, 200)
+#test_new_topic_view_not_found_status_code: check if the view is raising a 404 error when the Board does not exist
+    def test_new_topic_view_not_found_status_code(self):
+        url = reverse('new_topic', kwargs={'pk': 99})
+        response = self.client.get(url)
+        self.assertEquals(response.status_code, 404)
+#test_new_topic_url_resolves_new_topic_view: check if the right view is being used
+    def test_new_topic_url_resolves_new_topic_view(self):
+        view = resolve('/forum/2/new/')
+        self.assertEquals(view.func, new_topic)
+#test_new_topic_view_contains_link_back_to_board_topics_view: ensure the navigation back to the list of topics
+    def test_new_topic_view_contains_link_back_to_board_topics_view(self):
+        new_topic_url = reverse('new_topic', kwargs={'pk': 1})
+        board_topics_url = reverse('board_topics', kwargs={'pk': 1})
+        response = self.client.get(new_topic_url)
+        self.assertContains(response, 'href="{0}"'.format(board_topics_url))
 
