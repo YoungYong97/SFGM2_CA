@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tourGalwayWebsite',
+    'accounts',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [

@@ -2,6 +2,7 @@ from django.conf.urls import url
 from django.contrib import admin
 
 #import the views from our boards app
+from accounts import views as accounts_views
 from tourGalwayWebsite import views
 
 #add a pattern is that if no specific request is made, we route to the

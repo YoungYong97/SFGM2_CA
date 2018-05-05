@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url
+from accounts import views as accounts_views
 from tourGalwayWebsite import views
 
 urlpatterns = [
@@ -28,4 +29,5 @@ urlpatterns = [
     url(r'^transport/$', views.transport, name='transport'),
     url(r'^forum/(?P<pk>\d+)/$', views.board_topics, name='board_topics'),
     url(r'^forum/(?P<pk>\d+)/new/$', views.new_topic, name='new_topic'),
+    url(r'^signup/$', accounts_views.signup, name='signup'),
 ]
