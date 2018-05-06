@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 {% load static %}
-
+{% load i18n %}
 <html>
   <head>
-    <title>My Website</title>
+    <title>{% trans UniCities %}</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/transport.css' %}">
     <link rel="stylesheet" href="{% static 'css/website_base.css' %}" >
     <script>
@@ -40,16 +40,16 @@
   <body>
     <header id="mainHeader">
       <div class="container">
-        <h1>My Website</h1>
+        <h1>>{% trans "UniCities" %}</h1>
       </div>
     </header>
 
     <div class="container" id="navBar">
-      <a href="{% url 'home' %}">Home</a>
-      <a href="{% url 'ptv' %}">Places To Visit</a>
-      <a href="{% url 'food' %}">Food</a>
-      <a class="active" href="{% url 'transport' %}">Transport</a>
-      <a href="{% url 'contact' %}">Contact Us</a>
+      <a href="{% url 'home' %}">{% trans "Home" %}</a>
+      <a href="{% url 'ptv' %}">{% trans "Places to Visit" %}</a>
+      <a href="{% url 'food' %}">{% trans "Food" %}</a>
+      <a class="active" href="{% url 'transport' %}">{% trans "Transport" %}t</a>
+      <a href="{% url 'contact' %}">{% trans "Contact Us" %}</a>
     </div>
 
 <!--
@@ -137,7 +137,8 @@
     </div>-->
 
     <footer id="mainFooter">
-      <p>Copyright &copy; 2018 My Website</p>
+      
+      <p>{% trans "Copyright" %} &copy; {% trans "2018 UniCities" %}</p>
     </footer>
 
   </body>

@@ -1,0 +1,21 @@
+{% extends 'forum_base.html' %}
+{% load i18n %}
+{% load widget_tweaks %}
+
+{% block title %}{{topic.subject}}{% endblock %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'home' %}">Forum</a></li>
+  <li class="breadcrumb-item"><a href="{% url 'board_topics' board.pk %}">{{ board.name }}</a></li>
+  <li class="breadcrumb-item active">{{board.topic.subject}} </li>
+{% endblock %}
+
+
+{% block content %}
+    <div>
+
+    {{post.message}}
+
+
+    </div>
+{% endblock %}

@@ -1,17 +1,19 @@
-{% load static %}<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title>{% block title %}My Boards{% endblock %}</title>
+    <title>{% trans "Forum" %}</title>
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/website_base.css' %}">
     
-    {% block stylesheet %}{% endblock %}  <!--Adding a block stylesheet-->
+  {% block stylesheet %}{% endblock %}  <!--Adding a block stylesheet-->
   </head>
   <body>
     {% block body %}
       <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <a class="navbar-brand" href="{% url 'forum' %}">Forum</a>
+        <a class="navbar-brand" href="{% url 'forum' %}">{% trans "Forum" %}</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -24,10 +26,10 @@
                   {{ user.username }}
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userMenu">
-                  <a class="dropdown-item" href="#">My account</a>
-                  <a class="dropdown-item" href="#">Change password</a>
+                  <a class="dropdown-item" href="#">{% trans "My account" %} </a>
+                  <a class="dropdown-item" href="#">{% trans "Change password" %}</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="{% url 'logout' %}">Log out</a>
+                  <a class="dropdown-item" href="{% url 'logout' %}">{% trans "Log out" %}</a>
                 </div>
               </li>
             </ul>
@@ -44,6 +46,8 @@
       <div class="container">
         <ol class="breadcrumb my-4">
           {% block breadcrumb %}
+          {% endblock %}
+          {% block post %}
           {% endblock %}
         </ol>
         {% block content %}

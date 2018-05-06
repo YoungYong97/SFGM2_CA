@@ -1,5 +1,5 @@
 {% extends 'forum_base.html' %}
-
+{% load i18n %}
 {% block title %}
   {{ board.name }} - {{ block.super }}
 {% endblock %}
@@ -10,10 +10,9 @@
 {% endblock %}
 
 {% block post %}
-  <form class="form-inline mx-10 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
+  <div class="form-inline ml-auto my-lg-0">
+      <a href="{% url 'new_topic' board.pk %}"> New Topic</a>
+  </div>
 {% endblock %}
 
 {% block content %}
@@ -30,8 +29,10 @@
     <tbody>
       {% for topic in board.topics.all %}
         <tr>
-          <td>{{ topic.subject }}</td>
-          <td>{{ topic.starter.username }}</td>
+          <td>
+            <a href="{% url 'topic_message' board.pk topic.pk %}">{{ topic.subject }}</a>
+          </td>
+          <td>{{ topic.starter.user }}</td>
           <td>0</td>
           <td>0</td>
           <td>{{ topic.last_updated }}</td>

@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.models import User
+from django.http import HttpResponse
+from django.utils.translation import ugettext_lazy as _
 from .forms import NewTopicForm
 from .models import Board, Topic, Post
 # Create your views here.
@@ -37,15 +39,26 @@ def new_topic(request, pk):
         if form.is_valid():
             topic = form.save(commit=False)
             topic.board = board
-            topic.starter = user
+            topic.starter =  user.get_username()
             topic.save()
             post = Post.objects.create(
                 message=form.cleaned_data.get('message'),
                 topic=topic,
                 created_by=user
             )
-            return redirect('board_topics', pk=board.pk)  # TODO: redirect to the created topic page
+            return redirect('topic_message', board_pk=board.pk, topic_pk=topic.pk, post_pk=post.pk)  # TODO: redirect to the created topic page
     else:
         form = NewTopicForm()
     return render(request, 'new_topic.html', {'board': board, 'form': form})
 
+def topic_message(request, board_pk, topic_pk):
+    board = get_object_or_404(Board, pk=board_pk)
+    topic = get_object_or_404(Topic, pk=topic_pk)
+    subject = topic.subject
+   # post = get_object_or_404(Post, post_pk=post_pk)
+    user = User.objects.first()
+
+    return render(request, 'topic_message.html', {'board': board} , subject )
+
+def testlang(request):
+    return HttpResponse(_('Welcome to the discussion board!'))

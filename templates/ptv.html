@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
-
+{% load i18n %}
 <html>
   <head>
     <title>My Website</title>
@@ -9,19 +9,20 @@
   </head>
 
   <body>
-    <header id="mainHeader">
-      <div class="container">
-        <h1>My Website</h1>
-      </div>
-    </header>
-
-    <div class="container" id="navBar">
-      <a href="{% url 'home' %}">Home</a>
-      <a class="active" href="{% url 'ptv' %}">Places To Visit</a>
-      <a href="{% url 'food' %}">Food</a>
-      <a href="{% url 'transport' %}">Transport</a>
-      <a href="{% url 'contact' %}">Contact Us</a>
-    </div>
+      <header id="mainHeader">
+          <div class="container">
+            <h1>>{% trans "UniCities" %}</h1>
+          </div>
+        </header>
+    
+        <div class="container" id="navBar">
+          <a href="{% url 'home' %}">{% trans "Home" %}</a>
+          <a href="{% url 'ptv' %}">{% trans "Places to Visit" %}</a>
+          <a href="{% url 'food' %}">{% trans "Food" %}</a>
+          <a class="active" href="{% url 'transport' %}">{% trans "Transport" %}t</a>
+          <a href="{% url 'contact' %}">{% trans "Contact Us" %}</a>
+        </div>
+    
 
 <!--
     <div class="slideshowC">

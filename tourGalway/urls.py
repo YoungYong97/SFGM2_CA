@@ -15,12 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls import url
 from accounts import views as accounts_views
 from tourGalwayWebsite import views
 from django.contrib.auth import views as auth_views
 
-urlpatterns = [
+urlpatterns=[]
+
+urlpatterns += i18n_patterns (
     path('admin/', admin.site.urls),
     url(r'^$', views.home, name='home'),
     url(r'^forum/$', views.forum, name='forum'),
@@ -30,7 +33,9 @@ urlpatterns = [
     url(r'^transport/$', views.transport, name='transport'),
     url(r'^forum/(?P<pk>\d+)/$', views.board_topics, name='board_topics'),
     url(r'^forum/(?P<pk>\d+)/new/$', views.new_topic, name='new_topic'),
+    url(r'^forum/(?P<board_pk>\d+)/(?P<topic_pk>\d+)/$', views.topic_message, name='topic_message'),
     url(r'^signup/$', accounts_views.signup, name='signup'),
     url(r'^login/$', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     url(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),
-]
+    url(r'^testlang/', views.testlang, name='testlang'),
+)

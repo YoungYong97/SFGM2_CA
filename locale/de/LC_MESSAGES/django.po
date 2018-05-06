@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-06 14:39+0100\n"
+"PO-Revision-Date: 2018-05-06 14:42+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.7\n"
+
+#: .\templates\forum.html:4 .\templates\forum_base.html:7
+#: .\templates\forum_base.html:16
+msgid "Forum"
+msgstr "Forum"
+
+#: .\templates\forum.html:10
+msgid ""
+"\n"
+"        <th>Board</th>\n"
+"        <th>Posts</th>\n"
+"        <th>Topics</th>\n"
+"        <th>Last Post</th>\n"
+"        "
+msgstr "<th>Board</th> <th>Beiträge</th> <th>Themen</th> <th>Letzter Beitrag</th>"
+
+#: .\templates\forum_base.html:29
+msgid "My account"
+msgstr "mein-konto"
+
+#: .\templates\forum_base.html:30
+msgid "Change password"
+msgstr "Passwort ändern"
+
+#: .\templates\forum_base.html:32
+msgid "Log out"
+msgstr "Abmelden"
+
+#: .\templates\transport.html:43
+msgid "UniCities"
+msgstr ""
+
+#: .\templates\transport.html:48
+msgid "Home"
+msgstr "Startseite"
+
+#: .\templates\transport.html:49
+msgid "Places to Visit"
+msgstr "Orte zu besuchen"
+
+#: .\templates\transport.html:50
+msgid "Food"
+msgstr "Essen"
+
+#: .\templates\transport.html:51
+msgid "Transport"
+msgstr "Verkehr"
+
+#: .\templates\transport.html:52
+msgid "Contact Us"
+msgstr "Kontaktiere uns"
+
+#: .\templates\transport.html:141
+msgid "Copyright"
+msgstr "Urheberrecht"
+
+#: .\templates\transport.html:141
+msgid "2018 UniCities"
+msgstr "2018 UniCities"
+
+#: .\tourGalway\settings.py:119
+msgid "English"
+msgstr "Deutsch"
+
+#: .\tourGalway\settings.py:120
+msgid "German"
+msgstr "Deutsch"
+
+#: .\tourGalway\settings.py:121
+msgid "Chinese"
+msgstr "Chinesisch"
+
+#~ msgid "Welcome to the discussion board!"
+#~ msgstr "Willkommen Sie in der Diskussionsrunde!"
