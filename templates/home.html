@@ -1,42 +1,11 @@
-<!DOCTYPE html>
 {% load static %}
 {% load i18n %}
-
-
+<!DOCTYPE html>
 <html>
   <head>
-    <title>My Website</title>
+    <title>UniCities</title>
     <link rel="stylesheet" href="{% static 'css/website_base.css' %}" >
     <link rel="stylesheet" href="{% static 'css/index.css' %}" >
-    <script>
-      var slideIndex = 1;
-      showSlides(slideIndex);
-
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
-      }
-
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("slideShow");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-    }
-
-  </script>
   </head>
 
   <body>
@@ -45,13 +14,31 @@
             <h1>>{% trans "UniCities" %}</h1>
           </div>
         </header>
-    
+        <div class"container"  id="language-select">
+          <table>
+              <tr>
+                Select Language:
+              <tr>
+              {% get_language_info_list for LANGUAGES as languages %}
+              {% for language in languages %}
+                  <form action="{% url 'set_language' %}" method="post">
+                      {% csrf_token %}
+                      <input name="language" type="hidden" value="{{ language.code }}" />
+                      <input type="submit"
+                             value="{{ language.name|upper }}"
+                             class="btn-link{% if language.code == LANGUAGE_CODE %} current{% endif %}" />
+                  </form>
+              {% endfor %}
+            </tr>
+          </div>
+      
         <div class="container" id="navBar">
           <a href="{% url 'home' %}">{% trans "Home" %}</a>
           <a href="{% url 'ptv' %}">{% trans "Places to Visit" %}</a>
           <a href="{% url 'food' %}">{% trans "Food" %}</a>
           <a class="active" href="{% url 'transport' %}">{% trans "Transport" %}t</a>
           <a href="{% url 'contact' %}">{% trans "Contact Us" %}</a>
+
         </div>
     
 
@@ -91,20 +78,20 @@
   <div class="slideShowC">
 
     <div class="slideShow fade">
-      <img src="../static/Images/galway1.jpg">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <img src="{{MEDIA_URL}}{{ LANGUAGE_CODE }}/galway1.jpg">
+      <p>
+        {% trans "Galway is one of the brightest and most intriguing jewels of the West of Ireland. It marks the halfway point on the Wild Atlantic Way and is the only city on the entire 2500km route. The city is wild and bohemian, and at the same time full of culture, artistry, exceptional food and music. As well as being a popular seaside destination with long sandy beaches, Galway is also a thriving and cosmopolitan city centre. It is always a joy to explore with its wonderful cobbled streets, colourful shop facades, and its offbeat café/bar culture. Galway is also well known for its proliferation of festivals and civic events, with huge crowds gathering for the much-celebrated Galway International Arts Festival, the craic of the Galway Races, the spectacular Macnas Halloween Parade and numerous other events throughout the year. Ireland's great traditions of hospitality have their place in the city too, with turf fires and traditional music featuring in many of the city’s pubs. We look forward to welcoming you soon!" %}
+      </p>
     </div>
 
     <div class="slideShow fade">
-      <img src="../static/Images/galway2.jpg">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <img src="{{MEDIA_URL}}{{ LANGUAGE_CODE }}/galway2.jpg">
     </div>
 
     <div class="slideShow fade">
-      <img src="../static/Images/galway3.jpg">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <img src="{{MEDIA_URL}}{{ LANGUAGE_CODE }}/galway3.jpg">
+      {% trans "The West of Ireland and in particular County Galway is one of the most unique parts of Ireland for visitors to explore. With barren fields, rugged coastline, stone-walled fields, stark mountain ranges, and vast boglands, the West has some of the richest scenic beauty and natural attractions in Ireland. With Galway City, a true Renaissance city as its hub, the West offers a diverse set of experiences for every visitor. From the sunsets over Galway Bay to the rocky shores of the Aran Islands, and the enchanting locales of 'Quiet Man' country. Follow the trails of Connemara National Park, tour the great museums, watch craftspeople make hand-knit sweaters and other traditional crafts, sip a cup of tea beside a turf fire, or listen to the Irish language being spoken and sung. Galway provides glimpses of Ireland as it used to be, while also having a thriving urban centre at its heart." %}
     </div>
-
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
 

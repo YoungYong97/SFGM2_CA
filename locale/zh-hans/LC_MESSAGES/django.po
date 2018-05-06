@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-06 21:35+0100\n"
+"PO-Revision-Date: 2018-05-06 21:46+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.7\n"
+
+#: .\templates\contact.html:14 .\templates\food.html:15
+#: .\templates\home.html:15 .\templates\ptv.html:14
+#: .\templates\transport.html:43
+msgid "UniCities"
+msgstr ""
+
+#: .\templates\contact.html:19 .\templates\food.html:20
+#: .\templates\home.html:37 .\templates\ptv.html:19
+#: .\templates\transport.html:48
+msgid "Home"
+msgstr "首页"
+
+#: .\templates\contact.html:20 .\templates\food.html:21
+#: .\templates\home.html:38 .\templates\ptv.html:20
+#: .\templates\transport.html:49
+msgid "Places to Visit"
+msgstr "访问地点"
+
+#: .\templates\contact.html:21 .\templates\food.html:22
+#: .\templates\home.html:39 .\templates\ptv.html:21
+#: .\templates\transport.html:50
+msgid "Food"
+msgstr "食物"
+
+#: .\templates\contact.html:22 .\templates\food.html:23
+#: .\templates\home.html:40 .\templates\ptv.html:22
+#: .\templates\transport.html:51
+msgid "Transport"
+msgstr "运输"
+
+#: .\templates\contact.html:23 .\templates\food.html:24
+#: .\templates\home.html:41 .\templates\ptv.html:23
+#: .\templates\transport.html:52
+msgid "Contact Us"
+msgstr "联系我们"
+
+#: .\templates\forum_base.html:7 .\templates\forum_base.html:16
+msgid "Forum"
+msgstr "论坛"
+
+#: .\templates\forum_base.html:29
+msgid "My account"
+msgstr "我的账户"
+
+#: .\templates\forum_base.html:30
+msgid "Change password"
+msgstr "修改密码"
+
+#: .\templates\forum_base.html:32
+msgid "Log out"
+msgstr "登出"
+
+#: .\templates\home.html:84
+msgid ""
+"Galway is one of the brightest and most intriguing jewels of the West of "
+"Ireland. It marks the halfway point on the Wild Atlantic Way and is the only "
+"city on the entire 2500km route. The city is wild and bohemian, and at the "
+"same time full of culture, artistry, exceptional food and music. As well as "
+"being a popular seaside destination with long sandy beaches, Galway is also "
+"a thriving and cosmopolitan city centre. It is always a joy to explore with "
+"its wonderful cobbled streets, colourful shop facades, and its offbeat café/"
+"bar culture. Galway is also well known for its proliferation of festivals "
+"and civic events, with huge crowds gathering for the much-celebrated Galway "
+"International Arts Festival, the craic of the Galway Races, the spectacular "
+"Macnas Halloween Parade and numerous other events throughout the year. "
+"Ireland's great traditions of hospitality have their place in the city too, "
+"with turf fires and traditional music featuring in many of the city’s pubs. "
+"We look forward to welcoming you soon!"
+msgstr ""
+"戈尔韦是爱尔兰西部最亮丽，最迷人的珠宝之一。它标志着野生大西洋之路的中途点，"
+"是整个2500公里路线上唯一的城市。这座城市充满野性和波西米亚风情，同时充满了文"
+"化，艺术性，特殊的食物和音乐。戈尔韦既是一个拥有长长沙滩的热门海滨目的地，也"
+"是一个蓬勃发展的大都会中心。探索它的奇妙鹅卵石街道，色彩斑斓的店面以及其不同"
+"寻常的咖啡馆/酒吧文化，总是一种愉悦。戈尔韦因其节日和公民活动的激增而闻名于"
+"世，众多着名的高尔威国际艺术节，高威赛事的狂飙，壮观的麦克纳斯万圣节游行以及"
+"全年其他众多活动聚集了众多人潮。爱尔兰的热情好客的传统也在城市中占有一席之"
+"地，这座城市的许多酒吧都设有草坪火和传统音乐。我们期待尽快欢迎您！"
+
+#: .\templates\home.html:94
+msgid ""
+"The West of Ireland and in particular County Galway is one of the most "
+"unique parts of Ireland for visitors to explore. With barren fields, rugged "
+"coastline, stone-walled fields, stark mountain ranges, and vast boglands, "
+"the West has some of the richest scenic beauty and natural attractions in "
+"Ireland. With Galway City, a true Renaissance city as its hub, the West "
+"offers a diverse set of experiences for every visitor. From the sunsets over "
+"Galway Bay to the rocky shores of the Aran Islands, and the enchanting "
+"locales of 'Quiet Man' country. Follow the trails of Connemara National "
+"Park, tour the great museums, watch craftspeople make hand-knit sweaters and "
+"other traditional crafts, sip a cup of tea beside a turf fire, or listen to "
+"the Irish language being spoken and sung. Galway provides glimpses of "
+"Ireland as it used to be, while also having a thriving urban centre at its "
+"heart."
+msgstr ""
+"爱尔兰西部，特别是戈尔韦郡是爱尔兰最独特的地区之一，供游客探索。西部拥有贫瘠"
+"的土地，崎岖的海岸线，石墙山，崎岖的山脉和广阔的沼泽地，拥有爱尔兰最富有的风"
+"景美景和自然景观。随着戈尔韦市，一个真正的文艺复兴城市作为其中心，西方为每位"
+"游客提供了多样化的体验。从戈尔韦湾的日落到阿兰群岛的岩石海岸，以及'安静的"
+"人'国家迷人的地方。沿着康尼马拉国家公园的小径，参观伟大的博物馆，观看手工艺人"
+"制作手工编织的毛衣和其他传统工艺品，在草坪火旁喝一杯茶，或听爱尔兰语说唱。戈"
+"尔韦以前是爱尔兰的一瞥，同时它的心脏也拥有蓬勃发展的城市中心。"
+
+#: .\templates\topics.html:16
+msgid "New topic"
+msgstr "新话题"
+
+#: .\templates\transport.html:95
+msgid "Bus"
+msgstr "总线"
+
+#: .\templates\transport.html:107
+msgid "Bike"
+msgstr "自行车"
+
+#: .\templates\transport.html:118
+msgid "Train"
+msgstr "培养"
+
+#: .\templates\transport.html:141
+msgid "Copyright"
+msgstr ""
+
+#: .\templates\transport.html:141
+msgid "2018 UniCities"
+msgstr ""
+
+#: .\tourGalwayWebsite\views.py:86
+msgid "Welcome to the discussion board!"
+msgstr ""
+
+#: .\tourGalway\settings.py:122
+msgid "German"
+msgstr ""
+
+#: .\tourGalway\settings.py:123
+msgid "简体中文"
+msgstr ""

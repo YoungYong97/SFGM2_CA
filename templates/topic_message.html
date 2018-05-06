@@ -1,21 +1,38 @@
 {% extends 'forum_base.html' %}
+{% load gravatar widget_tweaks %}
 {% load i18n %}
 {% load widget_tweaks %}
 
-{% block title %}{{topic.subject}}{% endblock %}
+{% block title %}{{ topic.subject }}{% endblock %}
 
 {% block breadcrumb %}
-  <li class="breadcrumb-item"><a href="{% url 'home' %}">Forum</a></li>
-  <li class="breadcrumb-item"><a href="{% url 'board_topics' board.pk %}">{{ board.name }}</a></li>
-  <li class="breadcrumb-item active">{{board.topic.subject}} </li>
+<li class="breadcrumb-item"><a href="{% url 'home' %}">Boards</a></li>
+<li class="breadcrumb-item"><a href="{% url 'board_topics' topic.board.pk %}">{{ topic.board.name }}</a></li>
+<li class="breadcrumb-item active">{{ topic.subject }}</li>
+
 {% endblock %}
 
-
 {% block content %}
-    <div>
 
-    {{post.message}}
-
-
+{% for post in topic.posts.all %}
+<div class="card mb-2">
+  <div class="card-body p-3">
+    <div class="row mb-3">
+      <div class="col-6">
+        <strong class="text-muted">{{ post.created_by.username }}</strong>
+      </div>
     </div>
+    {{ post.message }}
+    </div>  
+</div>
+
+<div class="col-auto text-right">
+    <img src="{{ post.created_by|gravatar }}" alt="{{ post.created_by.username }}" class="w-1 h-1 border-0 rounded" style="width: 5%; height: 100%;">
+</div>
+{% endfor %}
+
+<div class="mb-4">
+    <a href="{% url 'reply_topic' topic.board.pk topic.pk %}" class="btn btn-primary" role="button">Reply</a>
+</div>
+
 {% endblock %}

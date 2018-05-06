@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
     'tourGalwayWebsite',
     'accounts',
     'widget_tweaks',
@@ -68,6 +69,7 @@ TEMPLATES = [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.template.context_processors.i18n',
+                'django.template.context_processors.media',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 
@@ -116,9 +118,9 @@ LANGUAGE_CODE = 'en-us'
 
 from django.utils.translation import ugettext_lazy as _
 LANGUAGES = (
-    ('en', _('English')),
+    ('en', ('English')),
     ('de', _('German')),
-    ('zh', _('Chinese')),
+    ('zh-hans', _('简体中文')),
 )
 
 
@@ -143,8 +145,12 @@ STATICFILES_DIRS = [
 
 LOGOUT_REDIRECT_URL = 'home'
 
-LOGIN_REDIRECT_URL ='home'
+LOGIN_URL = "/login/"
+
+LOGIN_REDIRECT_URL = 'home'
 
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
+
+MEDIA_URL = '/static/Images/'

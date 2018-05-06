@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-06 14:39+0100\n"
-"PO-Revision-Date: 2018-05-06 14:42+0100\n"
+"POT-Creation-Date: 2018-05-06 21:12+0100\n"
+"PO-Revision-Date: 2018-05-06 21:15+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -18,20 +18,45 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.0.7\n"
 
-#: .\templates\forum.html:4 .\templates\forum_base.html:7
-#: .\templates\forum_base.html:16
+#: .\templates\contact.html:14 .\templates\food.html:15
+#: .\templates\home.html:15 .\templates\ptv.html:14
+#: .\templates\transport.html:43
+msgid "UniCities"
+msgstr "2018 UniCities"
+
+#: .\templates\contact.html:19 .\templates\food.html:20
+#: .\templates\home.html:37 .\templates\ptv.html:19
+#: .\templates\transport.html:48
+msgid "Home"
+msgstr "Startseite"
+
+#: .\templates\contact.html:20 .\templates\food.html:21
+#: .\templates\home.html:38 .\templates\ptv.html:20
+#: .\templates\transport.html:49
+msgid "Places to Visit"
+msgstr "Orte zu besuchen"
+
+#: .\templates\contact.html:21 .\templates\food.html:22
+#: .\templates\home.html:39 .\templates\ptv.html:21
+#: .\templates\transport.html:50
+msgid "Food"
+msgstr "Essen"
+
+#: .\templates\contact.html:22 .\templates\food.html:23
+#: .\templates\home.html:40 .\templates\ptv.html:22
+#: .\templates\transport.html:51
+msgid "Transport"
+msgstr "Verkehr"
+
+#: .\templates\contact.html:23 .\templates\food.html:24
+#: .\templates\home.html:41 .\templates\ptv.html:23
+#: .\templates\transport.html:52
+msgid "Contact Us"
+msgstr "Kontaktiere uns"
+
+#: .\templates\forum_base.html:7 .\templates\forum_base.html:16
 msgid "Forum"
 msgstr "Forum"
-
-#: .\templates\forum.html:10
-msgid ""
-"\n"
-"        <th>Board</th>\n"
-"        <th>Posts</th>\n"
-"        <th>Topics</th>\n"
-"        <th>Last Post</th>\n"
-"        "
-msgstr "<th>Board</th> <th>Beiträge</th> <th>Themen</th> <th>Letzter Beitrag</th>"
 
 #: .\templates\forum_base.html:29
 msgid "My account"
@@ -45,29 +70,86 @@ msgstr "Passwort ändern"
 msgid "Log out"
 msgstr "Abmelden"
 
-#: .\templates\transport.html:43
-msgid "UniCities"
+#: .\templates\home.html:83
+msgid ""
+"Galway is one of the brightest and most intriguing jewels of the West of "
+"Ireland. It marks the halfway point on the Wild Atlantic Way and is the only "
+"city on the entire 2500km route. The city is wild and bohemian, and at the "
+"same time full of culture, artistry, exceptional food and music. As well as "
+"being a popular seaside destination with long sandy beaches, Galway is also "
+"a thriving and cosmopolitan city centre. It is always a joy to explore with "
+"its wonderful cobbled streets, colourful shop facades, and its offbeat café/"
+"bar culture. Galway is also well known for its proliferation of festivals "
+"and civic events, with huge crowds gathering for the much-celebrated Galway "
+"International Arts Festival, the craic of the Galway Races, the spectacular "
+"Macnas Halloween Parade and numerous other events throughout the year. "
+"Ireland's great traditions of hospitality have their place in the city too, "
+"with turf fires and traditional music featuring in many of the city’s pubs. "
+"We look forward to welcoming you soon!"
 msgstr ""
+"Galway ist einer der hellsten und faszinierendsten Juwelen im Westen "
+"Irlands. Es markiert die Hälfte des Wild Atlantic Way und ist die einzige "
+"Stadt auf der gesamten 2500 km langen Route. Die Stadt ist wild und "
+"unkonventionell und gleichzeitig voller Kultur, Kunst, außergewöhnlichem "
+"Essen und Musik. Galway ist nicht nur ein beliebtes Badeziel mit langen "
+"Sandstränden, sondern auch ein blühendes und kosmopolitisches Stadtzentrum. "
+"Es ist immer eine Freude, mit seinen wunderschönen gepflasterten Straßen, "
+"farbenfrohen Ladenfassaden und seiner ungewöhnlichen Café-Bar-Kultur zu "
+"entdecken. Galway ist auch bekannt für seine Vielzahl von Festivals und "
+"Bürgerveranstaltungen, mit riesigen Menschenmengen für das berühmte Galway "
+"International Arts Festival, die Galway Races, die spektakuläre Macnas "
+"Halloween Parade und zahlreiche andere Veranstaltungen das ganze Jahr über. "
+"Irlands große Traditionen der Gastfreundschaft haben auch ihren Platz in der "
+"Stadt, mit Torfbränden und traditioneller Musik, die in vielen Pubs der "
+"Stadt zu finden sind. Wir freuen uns, Sie bald zu begrüßen!"
 
-#: .\templates\transport.html:48
-msgid "Home"
-msgstr "Startseite"
+#: .\templates\home.html:93
+msgid ""
+"The West of Ireland and in particular County Galway is one of the most "
+"unique parts of Ireland for visitors to explore. With barren fields, rugged "
+"coastline, stone-walled fields, stark mountain ranges, and vast boglands, "
+"the West has some of the richest scenic beauty and natural attractions in "
+"Ireland. With Galway City, a true Renaissance city as its hub, the West "
+"offers a diverse set of experiences for every visitor. From the sunsets over "
+"Galway Bay to the rocky shores of the Aran Islands, and the enchanting "
+"locales of 'Quiet Man' country. Follow the trails of Connemara National "
+"Park, tour the great museums, watch craftspeople make hand-knit sweaters and "
+"other traditional crafts, sip a cup of tea beside a turf fire, or listen to "
+"the Irish language being spoken and sung. Galway provides glimpses of "
+"Ireland as it used to be, while also having a thriving urban centre at its "
+"heart."
+msgstr ""
+"Der Westen von Irland und insbesondere County Galway ist einer der "
+"einzigartigsten Teile von Irland für Besucher zu erkunden. Mit kargen "
+"Feldern, einer zerklüfteten Küste, Feldern mit Steinmauern, kahlen "
+"Gebirgsketten und ausgedehnten Moorlandschaften bietet der Westen einige der "
+"landschaftlich reizvollsten und schönsten Naturschönheiten Irlands. Mit "
+"Galway City, einer wahren Renaissance-Stadt als Drehkreuz, bietet der Westen "
+"für jeden Besucher vielfältige Erlebnisse. Von den Sonnenuntergängen über "
+"die Bucht von Galway bis zu den felsigen Ufern der Aran-Inseln und den "
+"bezaubernden Orten des \"Quiet Man\" -Landes. Folgen Sie den Pfaden des "
+"Connemara Nationalparks, besuchen Sie die großen Museen, beobachten Sie, wie "
+"Kunsthandwerker handgestrickte Pullover und andere traditionelle "
+"Handwerkskunst herstellen, trinken Sie eine Tasse Tee neben einem Rasenfeuer "
+"oder hören Sie die irische Sprache, die gesprochen und gesungen wird. Galway "
+"bietet Einblicke in Irland, wie es einmal war, und hat auch ein blühendes "
+"Stadtzentrum in seinem Herzen."
 
-#: .\templates\transport.html:49
-msgid "Places to Visit"
-msgstr "Orte zu besuchen"
+#: .\templates\topics.html:16
+msgid "New topic"
+msgstr "Neues Thema"
 
-#: .\templates\transport.html:50
-msgid "Food"
-msgstr "Essen"
+#: .\templates\transport.html:95
+msgid "Bus"
+msgstr "Bus"
 
-#: .\templates\transport.html:51
-msgid "Transport"
-msgstr "Verkehr"
+#: .\templates\transport.html:107
+msgid "Bike"
+msgstr "Fahrrad"
 
-#: .\templates\transport.html:52
-msgid "Contact Us"
-msgstr "Kontaktiere uns"
+#: .\templates\transport.html:118
+msgid "Train"
+msgstr "Zug"
 
 #: .\templates\transport.html:141
 msgid "Copyright"
@@ -77,17 +159,22 @@ msgstr "Urheberrecht"
 msgid "2018 UniCities"
 msgstr "2018 UniCities"
 
-#: .\tourGalway\settings.py:119
-msgid "English"
-msgstr "Deutsch"
-
-#: .\tourGalway\settings.py:120
+#: .\tourGalway\settings.py:122
 msgid "German"
 msgstr "Deutsch"
 
-#: .\tourGalway\settings.py:121
-msgid "Chinese"
-msgstr "Chinesisch"
+#: .\tourGalway\settings.py:123
+msgid "简体中文"
+msgstr "简体中文"
+
+#~ msgid "BoardPostsTopicsLast Post"
+#~ msgstr "BoardBeiträgeThemenLetzterBeitrag"
+
+#~ msgid "English"
+#~ msgstr "Deutsch"
+
+#~ msgid "Chinese"
+#~ msgstr "Chinesisch"
 
 #~ msgid "Welcome to the discussion board!"
 #~ msgstr "Willkommen Sie in der Diskussionsrunde!"
