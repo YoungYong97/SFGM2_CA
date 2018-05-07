@@ -39,7 +39,6 @@ urlpatterns += i18n_patterns (
     url(r'^signup/$', accounts_views.signup, name='signup'),
     url(r'^login/$', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     url(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),
-    url(r'^testlang/', views.testlang, name='testlang'),
     path('i18n/', include('django.conf.urls.i18n')),
 
 )

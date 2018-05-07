@@ -80,7 +80,3 @@ def reply_topic(request, board_pk, topic_pk):
     else:
         form = PostForm()
     return render(request, 'reply_topic.html', {'topic': topic, 'form': form})
-
-
-def testlang(request):
-    return HttpResponse(_('Welcome to the discussion board!'))

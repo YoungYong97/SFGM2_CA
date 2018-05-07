@@ -1,84 +1,29 @@
 <!DOCTYPE html>
+{% extends "website_base.html" %}
 {% load static %}
 {% load i18n %}
 <html>
-  <head>
-    <title>My Website</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/ptv.css' %}">
-    <link rel="stylesheet" href="{% static 'css/website_base.css' %}" >
-  </head>
 
-  <body>
-      <header id="mainHeader">
-          <div class="container">
-            <h1>>{% trans "UniCities" %}</h1>
-          </div>
-        </header>
-    
-        <div class="container" id="navBar">
-          <a href="{% url 'home' %}">{% trans "Home" %}</a>
-          <a href="{% url 'ptv' %}">{% trans "Places to Visit" %}</a>
-          <a href="{% url 'food' %}">{% trans "Food" %}</a>
-          <a class="active" href="{% url 'transport' %}">{% trans "Transport" %}t</a>
-          <a href="{% url 'contact' %}">{% trans "Contact Us" %}</a>
-        </div>
-    
+  <link rel="stylesheet" href="{% static 'css/ptv.css' %}" >
 
-<!--
-    <div class="slideshowC">
+{% block content %}
 
-      <div class="mySlides fade">
-        <div class="numberText">1/3</div>
-        <img src="Images/galway1.jpg" style="width:100%">
-        <div class="text">Caption Text</div>
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numberText">2/3</div>
-        <img src="Images/galway2.jpg" style="width:100%">
-        <div class="text">Caption Text</div>
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numberText">3/3</div>
-        <img src="Images/galway1.jpg" style="width:100%">
-        <div class="text">Caption Text</div>
-      </div>
-
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
+<div class="container">
+  <div class="article">
+    <img src="{{MEDIA_URL}}{{ LANGUAGE_CODE }}/ptv1.jpg">
+    <div class="articledesc">
+      <p>{% trans "The Garden Bar at Jurys Inn Galway is one of the city’s hidden gems. The Garden Bar is Galway’s largest beer garden and is situated adjacent to the River Corrib overlooking the World famous Claddagh and Galway’s Fishery watchtower. This amazing sun trap is the place to be on a summer’s day and often becomes Galway’s main hot spot for a relaxing coffee, a bite to eat or an evening of refreshing drinks. The garden has a capacity of over 150 people with a wide range of garden furniture to enjoy the wonderful surroundings. The area is serviced with a full sound system playing various genres of music to suit the tone of the day. The Garden Bar is the ideal spot for a casual get together or larger party with the hotel offering a full BBQ menu in the summer months with a dedicated Chef to cater for any occasion." %}</p>
     </div>
-    <br>
-
-    <div style="text-align:center">
-<span class="dot" onclick="currentSlide(1)"></span>
-<span class="dot" onclick="currentSlide(2)"></span>
-<span class="dot" onclick="currentSlide(3)"></span>
-</div>-->
-
-  <div class="slideShowC">
-
-    <div class="slideShow fade">
-      <img src="places.png">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-
   </div>
-<!--
-    <div class="container">
-      <section id="main">
-        <h1>Welcome</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </section>
-      <aside id="sideBar">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </aside>
-    </div>-->
 
-    <footer id="mainFooter">
-      <p>Copyright &copy; 2018 My Website</p>
-    </footer>
+  <div class="article">
+      <img src="{{MEDIA_URL}}{{ LANGUAGE_CODE }}/ptv2.jpg">
+      <div class="articledesc">
+        <p>{% trans "Spanning nearly 3,000 hectares of mountains, bogs, heaths and woodlands, Connemara National Park is a fantastic spot for walking and hiking There are actually 3 walks to do within the park. The pathways are well marked out and signposted and the walks are planned to suit everyone, from the novice to the well-seasoned walker. You also have the added comfort of having Park Rangers on hand, just in case you get into any difficulties." %}</p>
+      </div>
+    </div>
+</div>
 
-  </body>
+
+{% endblock content %}
 </html>

@@ -1,95 +1,15 @@
 <!DOCTYPE html>
+{% extends "website_base.html" %}
 {% load static %}
 {% load i18n %}
 <html>
-  <head>
-    <title>{% trans UniCities %}</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/transport.css' %}">
-    <link rel="stylesheet" href="{% static 'css/website_base.css' %}" >
-    <script>
-      var slideIndex = 1;
-      showSlides(slideIndex);
 
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
-      }
-
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("slideShow");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-    }
-
-  </script>
-  </head>
-
-  <body>
-    <header id="mainHeader">
-      <div class="container">
-        <h1>>{% trans "UniCities" %}</h1>
-      </div>
-    </header>
-
-    <div class="container" id="navBar">
-      <a href="{% url 'home' %}">{% trans "Home" %}</a>
-      <a href="{% url 'ptv' %}">{% trans "Places to Visit" %}</a>
-      <a href="{% url 'food' %}">{% trans "Food" %}</a>
-      <a class="active" href="{% url 'transport' %}">{% trans "Transport" %}t</a>
-      <a href="{% url 'contact' %}">{% trans "Contact Us" %}</a>
-    </div>
-
-<!--
-    <div class="slideshowC">
-
-      <div class="mySlides fade">
-        <div class="numberText">1/3</div>
-        <img src="Images/galway1.jpg" style="width:100%">
-        <div class="text">Caption Text</div>
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numberText">2/3</div>
-        <img src="Images/galway2.jpg" style="width:100%">
-        <div class="text">Caption Text</div>
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numberText">3/3</div>
-        <img src="Images/galway1.jpg" style="width:100%">
-        <div class="text">Caption Text</div>
-      </div>
-
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-    </div>
-    <br>
-
-    <div style="text-align:center">
-<span class="dot" onclick="currentSlide(1)"></span>
-<span class="dot" onclick="currentSlide(2)"></span>
-<span class="dot" onclick="currentSlide(3)"></span>
-</div>-->
-
+{% block content %}
   <div class="transportC">
 
     <div class="transport">
       <div class="ic">
-        <img src="transport.png">
+        <img src="{{MEDIA_URL}}{{ LANGUAGE_CODE }}/transport1.jpg">
       </div>
       <div class="tc">
         <h3>{% trans "Bus" %}</h3>
@@ -100,7 +20,7 @@
 
     <div class="transport">
       <div class="ic">
-        <img src="transport.png">
+        <img src="{{MEDIA_URL}}{{ LANGUAGE_CODE }}/transport2.jpg">
       </div>
 
       <div class="tc">
@@ -112,34 +32,11 @@
 
     <div class="transport">
       <div class="ic">
-        <img src="transport.png">
+        <img src="{{MEDIA_URL}}{{ LANGUAGE_CODE }}/transport3.jpg">
       </div>
       <div class="tc">
         <h3>{% trans "Train" %}</h3>
       </div>
-
+{% endblock %}
     </div>
-
-
-
-
-
-  </div>
-<!--
-    <div class="container">
-      <section id="main">
-        <h1>Welcome</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </section>
-      <aside id="sideBar">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </aside>
-    </div>-->
-
-    <footer id="mainFooter">
-      
-      <p>{% trans "Copyright" %} &copy; {% trans "2018 UniCities" %}</p>
-    </footer>
-
-  </body>
 </html>

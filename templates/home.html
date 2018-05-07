@@ -1,3 +1,4 @@
+{% extends 'website_base.html' %}
 {% load static %}
 {% load i18n %}
 <!DOCTYPE html>
@@ -8,116 +9,47 @@
     <link rel="stylesheet" href="{% static 'css/index.css' %}" >
   </head>
 
-  <body>
-      <header id="mainHeader">
-          <div class="container">
-            <h1>>{% trans "UniCities" %}</h1>
-          </div>
-        </header>
-        <div class"container"  id="language-select">
-          <table>
-              <tr>
-                Select Language:
-              <tr>
-              {% get_language_info_list for LANGUAGES as languages %}
-              {% for language in languages %}
-                  <form action="{% url 'set_language' %}" method="post">
-                      {% csrf_token %}
-                      <input name="language" type="hidden" value="{{ language.code }}" />
-                      <input type="submit"
-                             value="{{ language.name|upper }}"
-                             class="btn-link{% if language.code == LANGUAGE_CODE %} current{% endif %}" />
-                  </form>
-              {% endfor %}
-            </tr>
-          </div>
-      
-        <div class="container" id="navBar">
-          <a href="{% url 'home' %}">{% trans "Home" %}</a>
-          <a href="{% url 'ptv' %}">{% trans "Places to Visit" %}</a>
-          <a href="{% url 'food' %}">{% trans "Food" %}</a>
-          <a class="active" href="{% url 'transport' %}">{% trans "Transport" %}t</a>
-          <a href="{% url 'contact' %}">{% trans "Contact Us" %}</a>
+  {% block content %}
+  
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
 
-        </div>
-    
-
-<!--
-    <div class="slideshowC">
-
-      <div class="mySlides fade">
-        <div class="numberText">1/3</div>
-        <img src="Images/galway1.jpg" style="width:100%">
-        <div class="text">Caption Text</div>
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numberText">2/3</div>
-        <img src="Images/galway2.jpg" style="width:100%">
-        <div class="text">Caption Text</div>
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numberText">3/3</div>
-        <img src="Images/galway1.jpg" style="width:100%">
-        <div class="text">Caption Text</div>
-      </div>
-
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-    </div>
-    <br>
-
-    <div style="text-align:center">
-<span class="dot" onclick="currentSlide(1)"></span>
-<span class="dot" onclick="currentSlide(2)"></span>
-<span class="dot" onclick="currentSlide(3)"></span>
-</div>-->
-
-  <div class="slideShowC">
-
-    <div class="slideShow fade">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner ">
+    <div class="item active">
       <img src="{{MEDIA_URL}}{{ LANGUAGE_CODE }}/galway1.jpg">
-      <p>
-        {% trans "Galway is one of the brightest and most intriguing jewels of the West of Ireland. It marks the halfway point on the Wild Atlantic Way and is the only city on the entire 2500km route. The city is wild and bohemian, and at the same time full of culture, artistry, exceptional food and music. As well as being a popular seaside destination with long sandy beaches, Galway is also a thriving and cosmopolitan city centre. It is always a joy to explore with its wonderful cobbled streets, colourful shop facades, and its offbeat café/bar culture. Galway is also well known for its proliferation of festivals and civic events, with huge crowds gathering for the much-celebrated Galway International Arts Festival, the craic of the Galway Races, the spectacular Macnas Halloween Parade and numerous other events throughout the year. Ireland's great traditions of hospitality have their place in the city too, with turf fires and traditional music featuring in many of the city’s pubs. We look forward to welcoming you soon!" %}
-      </p>
     </div>
 
-    <div class="slideShow fade">
+    <div class="item">
       <img src="{{MEDIA_URL}}{{ LANGUAGE_CODE }}/galway2.jpg">
     </div>
 
-    <div class="slideShow fade">
+    <div class="item">
       <img src="{{MEDIA_URL}}{{ LANGUAGE_CODE }}/galway3.jpg">
-      {% trans "The West of Ireland and in particular County Galway is one of the most unique parts of Ireland for visitors to explore. With barren fields, rugged coastline, stone-walled fields, stark mountain ranges, and vast boglands, the West has some of the richest scenic beauty and natural attractions in Ireland. With Galway City, a true Renaissance city as its hub, the West offers a diverse set of experiences for every visitor. From the sunsets over Galway Bay to the rocky shores of the Aran Islands, and the enchanting locales of 'Quiet Man' country. Follow the trails of Connemara National Park, tour the great museums, watch craftspeople make hand-knit sweaters and other traditional crafts, sip a cup of tea beside a turf fire, or listen to the Irish language being spoken and sung. Galway provides glimpses of Ireland as it used to be, while also having a thriving urban centre at its heart." %}
     </div>
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
   </div>
 
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-  </div>
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<br>
+<div class="container">
+  <p>{% trans "Galway is one of the brightest and most intriguing jewels of the West of Ireland. It marks the halfway point on the Wild Atlantic Way and is the only city on the entire 2500km route. The city is wild and bohemian, and at the same time full of culture, artistry, exceptional food and music. As well as being a popular seaside destination with long sandy beaches, Galway is also a thriving and cosmopolitan city centre. It is always a joy to explore with its wonderful cobbled streets, colourful shop facades, and its offbeat café/bar culture. Galway is also well known for its proliferation of festivals and civic events, with huge crowds gathering for the much-celebrated Galway International Arts Festival, the craic of the Galway Races, the spectacular Macnas Halloween Parade and numerous other events throughout the year. Ireland's great traditions of hospitality have their place in the city too, with turf fires and traditional music featuring in many of the city’s pubs. We look forward to welcoming you soon!" %} </p>
+</div>
 
 
-<!--
-    <div class="container">
-      <section id="main">
-        <h1>Welcome</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </section>
-      <aside id="sideBar">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </aside>
-    </div>-->
-
-    <footer id="mainFooter">
-      <p>Copyright &copy; 2018 My Website</p>
-    </footer>
-
+  {% endblock content %}
   </body>
 </html>
